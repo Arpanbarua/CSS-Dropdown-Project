@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#nav
+{
+    background: #fff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.215);
+}
+
+:root{
+    --navfont: "Gidole", sans-serif;
+}
+
+
+.container
+{
+    width: 1200px;
+    margin: auto;
+    
+}
+
+ul, ol
+{
+    list-style-type: none;   
+}
+
+ul
+{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav  ul li a
+{
+    text-decoration: none;
+    padding: 20px 10px;
+    display: inline-block;
+    color: #000;
+    font-family: var(--navfont);
+    font-weight: 600;
+    position: relative;
+    
+}
+
+#nav  ul li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background-color: #EF4A23;
+   
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.8s;
+}
+
+#nav  ul li a:hover::before
+{
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+        
+}
+
+#nav .parent
+{
+    position: relative;
+}
+
+#nav .child
+{
+    background: #fff;
+    display: block;
+    position: absolute;
+    width: 180px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.215);
+    margin-top: -100px ;
+    visibility: hidden;
+    z-index: -1;
+    
+}
+
+#nav .child  a
+{
+    display: block;
+}
+
+#nav .parent:hover .child
+{
+    visibility: visible;
+    margin: 0;
+    transition: 0.8s;
+}
+
+#nav .sub_parent
+{
+    position: relative;
+}
+
+#nav .sub_child
+{
+    position: absolute;
+    top: 0;
+    /* right: 50%; */
+    margin-left: 200px;
+    margin-top: 200px;
+    display: block;
+    width: 150px;
+    visibility: hidden;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.27);
+
+}
+
+#nav .sub_child a
+{
+    display: block;
+}
+
+#nav .sub_parent:hover .sub_child
+{
+    visibility: visible;
+    transition: 1s;
+    margin-top: 10px;
+    margin-left: 185px;
+}
+
+
+
+
+
+
