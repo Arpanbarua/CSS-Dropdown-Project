@@ -102,6 +102,7 @@ ul
 #nav .sub_parent
 {
     position: relative;
+    
 }
 
 #nav .sub_child
@@ -109,18 +110,21 @@ ul
     position: absolute;
     top: 0;
     /* right: 50%; */
-    margin-left: 200px;
-    margin-top: 200px;
+    /* margin-left: 200px;
+    margin-top: 200px; */
+    right: 100px;
     display: block;
     width: 150px;
     visibility: hidden;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.27);
+    z-index: 2;
 
 }
 
 #nav .sub_child a
 {
     display: block;
+    
 }
 
 #nav .sub_parent:hover .sub_child
@@ -128,7 +132,9 @@ ul
     visibility: visible;
     transition: 1s;
     margin-top: 10px;
-    margin-left: 185px;
+    left: 180px;
+    
+    
 }
 
 
